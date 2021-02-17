@@ -36,7 +36,6 @@ public class User {
       this.email = email;
    }
 
-
    public Long getId() {
       return id;
    }
@@ -67,5 +66,17 @@ public class User {
 
    public void setEmail(String email) {
       this.email = email;
+   }
+
+   @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+   @JoinColumn(name = "car_id")
+   private Car car;
+
+   public Car getCar() {
+      return car;
+   }
+
+   public void setCar(Car oneToOne) {
+      this.car = oneToOne;
    }
 }
