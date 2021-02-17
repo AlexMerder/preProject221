@@ -39,7 +39,9 @@ public class MainApp {
             System.out.println();
         }
         User user = userService.getUserByCar("lada",2);
-        System.out.println(user.getFirstName()+ " " + user.getLastName() + " " + user.getEmail());
+        System.out.println("________________");
+        System.out.println("Имя пользователя: " + user.getFirstName()+ "\nФамилия: " + user.getLastName() + "\nПочта: " + user.getEmail());
+        System.out.println("________________");
 //        System.out.println(userService.getUserByCar("lada",2).getFirstName());
 
 
